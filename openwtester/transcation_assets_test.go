@@ -120,16 +120,18 @@ func testSubmitTransactionStep(tm *openw.WalletManager, rawTx *openwallet.RawTra
 func TestTransfer(t *testing.T) {
 
 	addrs := []string{
-		"vQm4FXsPr8HovMgmFjNERtJJWq86QkV3CX",
-		"v7gBdTVbC28i6Xawu4GMy6HbWkrwFtDdJD",
-		"vLcqFWpFR8ooS3kWr8djYFmDWosvsnKgLE",
-		"vRDVkBsJcVNxox1LZqwCmmetq2DpLAB7L5",
-		"vQ3gQqVyWfvsJWPap3kfTyU4LCNc9wKJsL",
-		"vTgLYA87efvoey2fYw9qDS2b6VvDjEFqGp",
-		"vGwcx1Pa8wmWTKU85tCuwFavWn2TaA3NwU",
-		"vE58DMrpa4b4rLRSseM3fEMb7zgZx6WjQU",
-		"vAEZqCRjFX54qjyzM5Cz2yV92X7LMrmFBq",
-		"v9ehT8Tzj2F4PAdacuEaWg7tXmnUWbw9eq",
+		//"vQm4FXsPr8HovMgmFjNERtJJWq86QkV3CX",
+		//"v7gBdTVbC28i6Xawu4GMy6HbWkrwFtDdJD",
+		//"vLcqFWpFR8ooS3kWr8djYFmDWosvsnKgLE",
+		//"vRDVkBsJcVNxox1LZqwCmmetq2DpLAB7L5",
+		//"vQ3gQqVyWfvsJWPap3kfTyU4LCNc9wKJsL",
+		//"vTgLYA87efvoey2fYw9qDS2b6VvDjEFqGp",
+		//"vGwcx1Pa8wmWTKU85tCuwFavWn2TaA3NwU",
+		//"vE58DMrpa4b4rLRSseM3fEMb7zgZx6WjQU",
+		//"vAEZqCRjFX54qjyzM5Cz2yV92X7LMrmFBq",
+		//"v9ehT8Tzj2F4PAdacuEaWg7tXmnUWbw9eq",
+
+		"vBJcsvZbsBUMkj3P5LZCLADFxoPwR73E9q",
 	}
 
 	tm := testInitWalletManager()
@@ -140,7 +142,7 @@ func TestTransfer(t *testing.T) {
 
 	for _, to := range addrs {
 
-		rawTx, err := testCreateTransactionStep(tm, walletID, accountID, to, "0.012345", "", nil)
+		rawTx, err := testCreateTransactionStep(tm, walletID, accountID, to, "0.212345", "", nil)
 		if err != nil {
 			return
 		}

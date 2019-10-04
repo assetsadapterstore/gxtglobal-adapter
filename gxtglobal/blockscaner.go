@@ -24,12 +24,12 @@ import (
 //BTCBlockScanner bitcoin的区块链扫描器
 type GXTBlockScanner struct {
 	*bitcoin.BTCBlockScanner
-	hssWM *WalletManager
+	gxtWM *WalletManager
 }
 
 //NewBTCBlockScanner 创建区块链扫描器
 func NewGXTBlockScanner(wm *WalletManager) *GXTBlockScanner {
-	bs := &GXTBlockScanner{hssWM: wm}
+	bs := &GXTBlockScanner{gxtWM: wm}
 	bs.BTCBlockScanner = bitcoin.NewBTCBlockScanner(wm.WalletManager)
 	bs.IsScanMemPool = false
 	return bs
@@ -39,7 +39,7 @@ func NewGXTBlockScanner(wm *WalletManager) *GXTBlockScanner {
 //GetAssetsAccountBalanceByAddress 查询账户相关地址的交易记录
 func (bs *GXTBlockScanner) GetBalanceByAddress(address ...string) ([]*openwallet.Balance, error) {
 
-	return bs.hssWM.getBalanceCalUnspent(address...)
+	return bs.gxtWM.getBalanceCalUnspent(address...)
 
 }
 

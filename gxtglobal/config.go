@@ -28,6 +28,6 @@ const (
 )
 
 var (
-	MainNetAddressPrefix = gxtTransaction.AddressPrefix{P2PKHPrefix: []byte{0x84}, P2WPKHPrefix: []byte{0x40}, P2SHPrefix: nil, Bech32Prefix: "hss"}
-	TestNetAddressPrefix = gxtTransaction.AddressPrefix{P2PKHPrefix: []byte{0x89}, P2WPKHPrefix: []byte{0x13}, P2SHPrefix: nil, Bech32Prefix: "hss"}
+	MainNetAddressPrefix = gxtTransaction.AddressPrefix{P2PKHPrefix: []byte{0x84}, P2WPKHPrefix: []byte{0x40}, P2SHPrefix: nil, Bech32Prefix: "gxt"}
+	TestNetAddressPrefix = gxtTransaction.AddressPrefix{P2PKHPrefix: []byte{0x89}, P2WPKHPrefix: []byte{0x13}, P2SHPrefix: nil, Bech32Prefix: "gxt"}
 )
